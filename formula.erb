@@ -5,6 +5,7 @@ class <%= ENV['NAME'].dup.gsub!(/-/, "_").split("_").map{|w| w[0] = w[0].upcase;
   version "<%= ENV['VERSION'] %>"
   sha256 "<%= ENV['HASH'] %>"
 
+  depends_on "jq"
   depends_on "ghq"
 
   def install
