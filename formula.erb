@@ -1,0 +1,17 @@
+class <%= ENV['NAME'].dup.gsub!(/-/, "_").split("_").map{|w| w[0] = w[0].upcase; w}.join %> < Formula
+  desc "<%= ENV['DESCRIPTION'] %>"
+  homepage "https://github.com/ringohub/<%= ENV['NAME'] %>"
+  url "https://github.com/ringohub/<%= ENV['NAME'] %>/releases/download/v<%= ENV['VERSION'] %>/<%= ENV['FILE'] %>"
+  version "<%= ENV['VERSION'] %>"
+  sha256 "<%= ENV['HASH'] %>"
+
+  depends_on "ghq"
+
+  def install
+    bin.install "<%= ENV['NAME'] %>"
+  end
+
+  test do
+    system "#{bin}/<%= ENV['NAME'] %>", "-v"
+  end
+end
