@@ -1,9 +1,9 @@
 class GitCreate < Formula
   desc "Create Repository and clone via ghq"
   homepage "https://github.com/ringohub/git-create"
-  url "https://github.com/ringohub/git-create/releases/download/v0.2.0/git-create"
-  version "0.2.0"
-  sha256 "ba6258b8ae8efac75fb3f8df489b957effdebe0ef72fc3e7bf0ca9d423a1021d"
+  url "https://github.com/ringohub/git-create/releases/download/v0.3.0/git-create"
+  version "0.3.0"
+  sha256 "fd82f42dffc21d09ab0c88d36726a4b77dc90ff7ea63ae3befccfb93f535acf5"
 
   depends_on "jq"
   depends_on "ghq"
